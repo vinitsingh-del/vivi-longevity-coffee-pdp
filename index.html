@@ -229,20 +229,21 @@ img,svg{display:block;max-width:100%}
 }
 .hero-benefit-card .mini-benefit{
   min-width:max-content;
-  min-height:36px;
+  min-height:38px;
   justify-content:center;
   text-align:center;
   white-space:nowrap;
   border:1px solid rgba(255,255,255,.46);
   border-radius:999px;
-  padding:6px 11px;
+  padding:7px 13px;
   background:rgba(255,255,255,.2);
   color:#fff;
   line-height:1;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.34),0 5px 12px rgba(135,49,4,.1);
-  font-size:10.5px;
-  font-weight:800;
-  text-shadow:0 1px 1px rgba(82,32,5,.18);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.01em;
+  text-shadow:0 0 10px rgba(255,255,255,.72),0 1px 2px rgba(82,32,5,.24);
   animation:benefitPulse 3.6s ease-in-out infinite;
   transform-origin:center;
 }
@@ -251,11 +252,11 @@ img,svg{display:block;max-width:100%}
 .benefit-track .mini-benefit:nth-child(4n){animation-delay:.45s}
 .benefit-track .mini-benefit:nth-child(5n){animation-delay:.6s}
 .hero-benefit-card .mini-benefit svg{
-  width:14px;
-  height:14px;
+  width:15px;
+  height:15px;
   flex:0 0 auto;
   color:#fff;
-  filter:drop-shadow(0 1px 1px rgba(95,39,7,.18));
+  filter:drop-shadow(0 0 7px rgba(255,255,255,.7)) drop-shadow(0 1px 1px rgba(95,39,7,.18));
 }
 @keyframes benefitCardFloat{
   0%,100%{transform:translateY(0)}
@@ -271,8 +272,8 @@ img,svg{display:block;max-width:100%}
   100%{transform:translateX(360%) rotate(12deg);opacity:0}
 }
 @keyframes benefitPulse{
-  0%,100%{background:rgba(255,255,255,.18);transform:translateY(0)}
-  48%{background:rgba(255,255,255,.3);transform:translateY(-1px)}
+  0%,100%{background:rgba(255,255,255,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.34),0 5px 12px rgba(135,49,4,.1);transform:translateY(0)}
+  48%{background:rgba(255,255,255,.34);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 0 18px rgba(255,255,255,.24),0 7px 14px rgba(135,49,4,.12);transform:translateY(-1px)}
 }
 .dots{display:flex;justify-content:center;gap:7px;margin-top:12px}
 .dot{
