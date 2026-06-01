@@ -184,17 +184,14 @@ img,svg{display:block;max-width:100%}
   position:relative;
   overflow:hidden;
   padding:8px 0;
-  border:1px solid rgba(255,255,255,.42);
+  border:1px solid rgba(252,98,13,.2);
   border-left:0;
   border-right:0;
   border-radius:0;
-  background:
-    linear-gradient(135deg,rgba(252,98,13,.92) 0%,rgba(255,132,44,.8) 48%,rgba(255,180,108,.68) 100%);
-  box-shadow:0 12px 28px rgba(252,98,13,.18),inset 0 1px 0 rgba(255,255,255,.48),inset 0 -1px 0 rgba(143,57,8,.16);
+  background:var(--vivi-coral);
+  box-shadow:0 8px 18px rgba(252,98,13,.16);
   margin:0 -16px 10px;
   animation:benefitCardFloat 5.5s ease-in-out infinite;
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
 }
 .hero-benefit-card::before,
 .hero-benefit-card::after{
@@ -206,18 +203,8 @@ img,svg{display:block;max-width:100%}
   z-index:2;
   pointer-events:none;
 }
-.hero-benefit-card::before{left:0;background:linear-gradient(90deg,rgba(252,98,13,.95) 12%,rgba(252,98,13,0))}
-.hero-benefit-card::after{right:0;background:linear-gradient(270deg,rgba(255,154,74,.9) 12%,rgba(255,154,74,0))}
-.hero-benefit-card .glass-shine{
-  position:absolute;
-  inset:-40% auto -40% -35%;
-  width:42%;
-  z-index:1;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.24),transparent);
-  transform:rotate(12deg);
-  animation:benefitGlassSweep 4.8s ease-in-out infinite;
-  pointer-events:none;
-}
+.hero-benefit-card::before{left:0;background:linear-gradient(90deg,var(--vivi-coral) 12%,rgba(252,98,13,0))}
+.hero-benefit-card::after{right:0;background:linear-gradient(270deg,var(--vivi-coral) 12%,rgba(252,98,13,0))}
 .benefit-track{
   position:relative;
   z-index:1;
@@ -233,13 +220,13 @@ img,svg{display:block;max-width:100%}
   justify-content:center;
   text-align:center;
   white-space:nowrap;
-  border:1px solid rgba(255,255,255,.46);
+  border:1px solid rgba(255,255,255,.34);
   border-radius:999px;
   padding:7px 13px;
-  background:rgba(255,255,255,.2);
+  background:rgba(255,255,255,.16);
   color:#fff;
   line-height:1;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.34),0 5px 12px rgba(135,49,4,.1);
+  box-shadow:none;
   font-size:12px;
   font-weight:900;
   letter-spacing:.01em;
@@ -266,14 +253,9 @@ img,svg{display:block;max-width:100%}
   from{transform:translateX(-50%)}
   to{transform:translateX(0)}
 }
-@keyframes benefitGlassSweep{
-  0%,42%{transform:translateX(0) rotate(12deg);opacity:0}
-  52%{opacity:1}
-  100%{transform:translateX(360%) rotate(12deg);opacity:0}
-}
 @keyframes benefitPulse{
-  0%,100%{background:rgba(255,255,255,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.34),0 5px 12px rgba(135,49,4,.1);transform:translateY(0)}
-  48%{background:rgba(255,255,255,.34);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 0 18px rgba(255,255,255,.24),0 7px 14px rgba(135,49,4,.12);transform:translateY(-1px)}
+  0%,100%{background:rgba(255,255,255,.16);box-shadow:none;transform:translateY(0)}
+  48%{background:rgba(255,255,255,.26);box-shadow:0 0 14px rgba(255,255,255,.2);transform:translateY(-1px)}
 }
 .dots{display:flex;justify-content:center;gap:7px;margin-top:12px}
 .dot{
@@ -917,7 +899,6 @@ details p{margin:0 0 14px;color:var(--vivi-text)}
   <main>
     <section class="gallery">
       <div class="hero-benefit-card" aria-label="Product supports">
-        <span class="glass-shine" aria-hidden="true"></span>
         <div class="benefit-track">
           <span class="mini-benefit"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 4c2.2 0 3.7 1.5 3.7 3.6v8.1c0 2.2-1.5 4.3-3.7 4.3S5.3 18.4 5.3 16.1c0-1.7 1-2.7 2.6-3.2M15 4c-2.2 0-3.7 1.5-3.7 3.6" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path d="M8.1 8.3h7.8M8.1 12h7.8M8.1 15.7h7.8" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>Supports Gut Health</span>
           <span class="mini-benefit"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.2 18.8c-2-.7-3.4-2.8-3.4-5.2 0-2.9 2.1-5.3 4.6-5.3.8-1.8 2.4-3 4.3-3 2.7 0 4.9 2.5 4.9 5.6 0 2.8-1.7 5.1-4 5.5" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path d="M11.3 12.2h5.1M13.9 9.6v5.2" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>Sharpened Focus</span>
