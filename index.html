@@ -185,6 +185,7 @@ img,svg{display:block;max-width:100%}
   background:#fff;
   box-shadow:0 10px 26px rgba(27,56,84,.12);
   margin-bottom:10px;
+  animation:benefitCardFloat 5.5s ease-in-out infinite;
 }
 .hero-benefit-card .mini-benefit{
   min-height:52px;
@@ -198,11 +199,25 @@ img,svg{display:block;max-width:100%}
   line-height:1.08;
   box-shadow:none;
   font-size:10.5px;
+  animation:benefitPulse 3.6s ease-in-out infinite;
+  transform-origin:center;
 }
+.hero-benefit-card .mini-benefit:nth-child(2){animation-delay:.15s}
+.hero-benefit-card .mini-benefit:nth-child(3){animation-delay:.3s}
+.hero-benefit-card .mini-benefit:nth-child(4){animation-delay:.45s}
+.hero-benefit-card .mini-benefit:nth-child(5){animation-delay:.6s}
 .hero-benefit-card .mini-benefit svg{
   width:17px;
   height:17px;
   flex:0 0 auto;
+}
+@keyframes benefitCardFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-3px)}
+}
+@keyframes benefitPulse{
+  0%,100%{background:var(--vivi-soft);box-shadow:0 0 0 rgba(255,110,25,0);transform:translateY(0)}
+  48%{background:#fff8f3;box-shadow:0 7px 16px rgba(255,110,25,.12);transform:translateY(-2px)}
 }
 .dots{display:flex;justify-content:center;gap:7px;margin-top:12px}
 .dot{
@@ -803,11 +818,11 @@ details p{margin:0 0 14px;color:var(--vivi-text)}
   <main>
     <section class="gallery">
       <div class="hero-benefit-card" aria-label="Product supports">
-        <span class="mini-benefit"><svg viewBox="0 0 24 24" fill="none"><path d="M7 4c3 0 5 2 5 5v11M17 4c-3 0-5 2-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 12h10M7 16h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Supports Gut Health</span>
-        <span class="mini-benefit"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12c3-7 11-7 14 0-3 7-11 7-14 0Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/></svg>Sharpened Focus</span>
-        <span class="mini-benefit"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 5 14h6l-1 8 8-12h-6l1-8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Smooth Energy</span>
-        <span class="mini-benefit"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l1.8 5.1L19 10l-5.2 1.9L12 17l-1.8-5.1L5 10l5.2-1.9L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M18 15l.8 2.2L21 18l-2.2.8L18 21l-.8-2.2L15 18l2.2-.8L18 15Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Glowing Skin</span>
-        <span class="mini-benefit"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-4.4 7-11a7 7 0 1 0-14 0c0 6.6 7 11 7 11Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 10.5 11 13l4-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Faster Recovery</span>
+        <span class="mini-benefit"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 4c2.2 0 3.7 1.5 3.7 3.6v8.1c0 2.2-1.5 4.3-3.7 4.3S5.3 18.4 5.3 16.1c0-1.7 1-2.7 2.6-3.2M15 4c-2.2 0-3.7 1.5-3.7 3.6" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path d="M8.1 8.3h7.8M8.1 12h7.8M8.1 15.7h7.8" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>Supports Gut Health</span>
+        <span class="mini-benefit"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.2 18.8c-2-.7-3.4-2.8-3.4-5.2 0-2.9 2.1-5.3 4.6-5.3.8-1.8 2.4-3 4.3-3 2.7 0 4.9 2.5 4.9 5.6 0 2.8-1.7 5.1-4 5.5" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path d="M11.3 12.2h5.1M13.9 9.6v5.2" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>Sharpened Focus</span>
+        <span class="mini-benefit"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 13h3.4l1.8-4.5 3.1 8.5 2.3-6h2.1l1.2 2H20" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 21a8.8 8.8 0 1 0 0-17.6A8.8 8.8 0 0 0 12 21Z" stroke="currentColor" stroke-width="1.65"/></svg>Smooth Energy</span>
+        <span class="mini-benefit"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c3.2-2.4 5.3-5.2 5.3-8.2A5.3 5.3 0 0 0 12 7.5a5.3 5.3 0 0 0-5.3 5.3c0 3 2.1 5.8 5.3 8.2Z" stroke="currentColor" stroke-width="1.65" stroke-linejoin="round"/><path d="M12 3v3M9 4.2l1.2 2M15 4.2l-1.2 2M9.6 13.2h4.8M12 10.8v4.8" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>Glowing Skin</span>
+        <span class="mini-benefit"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.5 6.5h9v11h-9z" stroke="currentColor" stroke-width="1.65" stroke-linejoin="round"/><path d="M12 9.2v5.6M9.2 12h5.6M9.2 4h5.6M9.2 20h5.6" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>Faster Recovery</span>
       </div>
       <div class="gallery-stage" id="galleryStage">
         <div class="badge-row">
@@ -843,7 +858,7 @@ details p{margin:0 0 14px;color:var(--vivi-text)}
     </section>
 
     <section class="benefit-pills reveal">
-      <div class="pill"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 5 14h6l-1 8 8-12h-6l1-8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Smooth Energy</div>
+      <div class="pill"><svg viewBox="0 0 24 24" fill="none"><path d="M4 13h3.4l1.8-4.5 3.1 8.5 2.3-6h2.1l1.2 2H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 21a8.8 8.8 0 1 0 0-17.6A8.8 8.8 0 0 0 12 21Z" stroke="currentColor" stroke-width="1.8"/></svg>Smooth Energy</div>
       <div class="pill"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4a8 8 0 0 1 8 8M12 4a8 8 0 0 0-8 8m8-8v16M4 12h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Cellular Health</div>
       <div class="pill"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12c3-7 11-7 14 0-3 7-11 7-14 0Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/></svg>Sharper Focus</div>
       <div class="pill"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-4.4 7-11a7 7 0 1 0-14 0c0 6.6 7 11 7 11Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 10.5 11 13l4-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Gut Support</div>
