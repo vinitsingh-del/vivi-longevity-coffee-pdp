@@ -1391,7 +1391,21 @@ function selPack(el){
 // QTY
 var qty=1;
 function chQty(d){qty=Math.max(1,qty+d);document.getElementById('qnum').textContent=qty;document.getElementById('sqnum').textContent=qty;updateAll();}
-function updateAll(){var t=(packPrice*qty).toFixed(0);var tot='$'+t+'.00';document.getElementById('atctot').textContent=tot;document.getElementById('atcbtnlbl').textContent='Add to Cart - '+tot;document.getElementById('satcprice').textContent=tot+' - '+packLabel;document.getElementById('satcbtnlbl').textContent='Add to Cart - '+tot;}
+function updateAll(){
+  var t=(packPrice*qty).toFixed(0);
+  var tot='$'+t+'.00';
+  // Main ATC
+  var e=document.getElementById('atctot'); if(e) e.textContent=tot;
+  var e2=document.getElementById('atcbtnlbl'); if(e2) e2.textContent='Add to Cart - '+tot;
+  // Second ATC (above emotional block)
+  var e3=document.getElementById('atctot2'); if(e3) e3.textContent=tot;
+  var e4=document.getElementById('atcbtn2lbl'); if(e4) e4.textContent='Add to Cart - '+tot;
+  // Sticky ATC
+  var e5=document.getElementById('satcprice'); if(e5) e5.textContent=tot+' - '+packLabel;
+  var e6=document.getElementById('satcbtnlbl'); if(e6) e6.textContent='Add to Cart - '+tot;
+  // Sync qty2
+  var e7=document.getElementById('qnum2'); if(e7) e7.textContent=qty;
+}
 
 // ATC
 var cartN=0;
